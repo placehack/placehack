@@ -13,4 +13,3 @@ const generalController = require('../controllers/general.controller')
 module.exports = router;
 
 router.get('/', generalController.index)
-router.post('/results', placesController.search)
