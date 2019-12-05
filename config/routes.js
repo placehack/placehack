@@ -13,4 +13,6 @@ const generalController = require('../controllers/general.controller')
 module.exports = router;
 
 router.get('/', generalController.index)
-router.post('/results', placesController.search)
+
+router.get('/login', authMiddleware.isNotAuthenticated, usersController.login)
+router.post('/login', authMiddleware.isNotAuthenticated, usersController.doLogin)  
