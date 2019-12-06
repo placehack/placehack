@@ -16,3 +16,6 @@ router.get('/', generalController.index)
 
 router.get('/login', authMiddleware.isNotAuthenticated, usersController.login)
 router.post('/login', authMiddleware.isNotAuthenticated, usersController.doLogin)  
+
+router.get('/search-random', placesController.random)
+// router.get('/search', usersController.search)
