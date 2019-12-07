@@ -1,8 +1,27 @@
-<h1>{{address_components.0.long_name}}</h1>
+<script>
+    function giveTheBg(){
+        document.getElementById("cabeceraSearch").style.backgroundImage="linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.0.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc')";
+    }
+    window.onload = giveTheBg
+</script>
+
+<header class="masthead" id="cabeceraSearch">
+<div class="container h-100">
+    <div class="row h-100 align-items-center justify-content-center text-center">
+    <div class="col-lg-10 align-self-end">
+    </div>
+    <div class="col-lg-8 align-self-baseline">
+        <h1 class="text-white font-weight-bold ">{{address_components.0.long_name}}</h1>
+        <hr class="divider my-4">
+    </div>
+    </div>
+</div>
+</header>
+
 
 <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.0.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="">
 
-<a href="{{url}}" class="btn btn-primary">Ver en Google Maps</a>
+<a href="{{url}}" class="btn btn-primary" target="_blank">Ver en Google Maps</a>
 
 <h3>Descripción</h3>
 

@@ -8,6 +8,7 @@
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
+    
   }
 
 .navbar-toggler {
@@ -62,10 +63,16 @@
   margin-left: auto !important;
 }
 
+#noMainNav {
+    background-color: #212529;
+}
+
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   background-color: #fff;
-  transition: background-color 0.2s ease;
+  top: 0;
+  transition: top 0.3s;
+  /* transition: background-color 0.2s ease; */
 }
 
 #mainNav .navbar-brand {
@@ -129,7 +136,7 @@
   }
 }
 
-/* CABECERA */
+/* CABECERA PRINCIPAL */
 
 .container {
     width: 100%;
@@ -281,6 +288,15 @@ header.masthead h1 {
     header.masthead h1 {
         font-size: 3.5rem;
     }
+}
+
+/* CABECERA SEARCH */
+#cabeceraSearch{
+    height: 700px;
+    background-image: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../img/fondo-cabecera_01.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 /* GALERÍA DE FOTOS */
