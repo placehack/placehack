@@ -1,6 +1,6 @@
 <script>
     function giveTheBg(){
-        document.getElementById("cabeceraSearch").style.backgroundImage="linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.0.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc')";
+        document.getElementById("cabeceraSearch").style.backgroundImage="linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url({{place.mainPhoto}})";
     }
     window.onload = giveTheBg
 </script>
@@ -11,7 +11,7 @@
     <div class="col-lg-10 align-self-end">
     </div>
     <div class="col-lg-8 align-self-baseline">
-        <h1 class="text-white font-weight-bold ">{{address_components.0.long_name}}</h1>
+        <h1 class="text-white font-weight-bold ">{{googleData.address_components.0.long_name}}</h1>
         <hr class="divider my-4">
     </div>
     </div>
@@ -19,16 +19,13 @@
 </header>
 
 
-<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.0.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="">
+<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{googleData.photos.0.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="">
 
-<a href="{{url}}" class="btn btn-primary" target="_blank">Ver en Google Maps</a>
+<a href="{{googleData.url}}" class="btn btn-primary" target="_blank">Ver en Google Maps</a>
 
-<h3>Descripción</h3>
+<h3>Description</h3>
 
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
-    into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
-    passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+<p>{{place.info.description}}</p>
 
 <div class="container gallery-container">
 
@@ -40,8 +37,8 @@
 
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <a class="lightbox" href="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.0.html_attributions}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc">
-                        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.0.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="Park">
+                    <a class="lightbox" href="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{googleData.photos.0.html_attributions}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc">
+                        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{googleData.photos.0.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="Park">
                     </a>
                     <div class="caption">
                         <h3>Thumbnail label</h3>
@@ -51,8 +48,8 @@
             </div>
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <a class="lightbox" href="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.1.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc">
-                        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.1.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="Bridge">
+                    <a class="lightbox" href="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{googleData.photos.1.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc">
+                        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{googleData.photos.1.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="Bridge">
                     </a>
                     <div class="caption">
                         <h3>Thumbnail label</h3>
@@ -62,8 +59,8 @@
             </div>
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <a class="lightbox" href="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.2.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc">
-                        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.2.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="Tuneel">
+                    <a class="lightbox" href="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{googleData.photos.2.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc">
+                        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{googleData.photos.2.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="Tuneel">
                     </a>
                     <div class="caption">
                         <h3>Thumbnail label</h3>
@@ -73,8 +70,8 @@
             </div>
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <a class="lightbox" href="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.3.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc">
-                        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.3.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="Coast">
+                    <a class="lightbox" href="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{googleData.photos.3.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc">
+                        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{googleData.photos.3.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="Coast">
                     </a>
                     <div class="caption">
                         <h3>Thumbnail label</h3>
@@ -84,8 +81,8 @@
             </div>
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <a class="lightbox" href="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.4.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc">
-                        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.4.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="Rails">
+                    <a class="lightbox" href="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{googleData.photos.4.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc">
+                        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{googleData.photos.4.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="Rails">
                     </a>
                     <div class="caption">
                         <h3>Thumbnail label</h3>
@@ -95,8 +92,8 @@
             </div>
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                    <a class="lightbox" href="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.5.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc">
-                        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{photos.5.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="Traffic">
+                    <a class="lightbox" href="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{googleData.photos.5.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc">
+                        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{googleData.photos.5.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="Traffic">
                     </a>
                     <div class="caption">
                         <h3>Thumbnail label</h3>
