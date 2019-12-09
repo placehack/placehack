@@ -55,10 +55,10 @@ module.exports.random = (req, res, next) => {
     .then(response => {
         axios.get(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${response.data.candidates[0].place_id}&key=${ApiPlaces}`)
         .then(response => {
-            console.log(randomPlace)
+            //console.log(randomPlace)
             Place.findOne({name: randomPlace})
             .then(place => {
-                console.log(place)
+                //console.log(place)
                 const googleData = response.data.result
                 res.render('search', { googleData, place })  //{ googleData, place }
                 // res.send(place)

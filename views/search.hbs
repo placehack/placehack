@@ -1,6 +1,6 @@
 <script>
     function giveTheBg(){
-        document.getElementById("cabeceraSearch").style.backgroundImage="linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url({{place.mainPhoto}})";
+        document.getElementById("cabeceraSearch").style.backgroundImage="linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 100%, rgba(0, 0, 0, 0.6) 100%), url({{place.mainPhoto}})";
     }
     window.onload = giveTheBg
 </script>
@@ -18,22 +18,34 @@
 </div>
 </header>
 
+<div class="container">
+    <div class="featured-property-half d-flex">
+        <div class="image" style="background-image: url({{place.mainPhoto}})"></div>
+        <div class="text">
+            <h2><strong>{{googleData.address_components.0.long_name}}</strong>, {{googleData.address_components.3.long_name}}</STRike></h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quae obcaecati doloribus distinctio, aliquam vero? Molestias, amet, eveniet.</p>
+            <ul class="property-list-details mb-5">
+                <li class="text-black">Language: <strong class="text-black">{{googleData.address_components.3.short_name}}</strong></li>
+                <li>Property 2: <strong>Property 2</strong></li>
+                <li>Property 3: <strong>Property 3</strong></li>
+                <li>Property 4: <strong>Property 4</strong></li>
+                <li>Property 5: <strong>Property 5</strong></li>
+            </ul>
+            <p><a href="{{googleData.url}}" class="btn btn-primary px-4 py-3">View on Google Maps</a></p>
+        </div>
+    </div>
+</div>
 
-<img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference={{googleData.photos.0.photo_reference}}&key=AIzaSyCQGV-npN7iOlA_FenddemF-WMEAvFqloc" alt="">
-
-<a href="{{googleData.url}}" class="btn btn-primary" target="_blank">Ver en Google Maps</a>
-
-<h3>Description</h3>
-
-<p>{{place.info.description}}</p>
-
-<div class="container gallery-container">
-
-    <h1>Lugares de Interés</h1>
-    
-    <div class="tz-gallery">
-
+<div class="site-section">
+    <div class="container">
         <div class="row">
+          <div class="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
+            <h2 class="mb-5">Places of interest</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, fugit nam obcaecati fuga itaque deserunt
+              officia, error reiciendis ab quod?</p>
+          </div>
+        </div>
+        <div class="row tz-gallery">
 
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
@@ -102,9 +114,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 </div>
 
 

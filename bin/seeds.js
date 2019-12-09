@@ -16,6 +16,7 @@ const places = [
     {
         name: 'Barcelona',
         mainPhoto: '/img/mainPhotos/barcelona.jpg',
+        descriptionPhoto: '/img/descriptionPhotos/madrid.jpg',
         location: {
             lat: 39.4699075,
             lng: -0.3762881,
@@ -45,6 +46,7 @@ const places = [
     {
         name: 'Madrid',
         mainPhoto: '/img/mainPhotos/madrid.jpg',
+        descriptionPhoto: '/img/descriptionPhotos/barcelona.jpg',
         location: {
             lat: 39.4699075,
             lng: -0.3762881,
