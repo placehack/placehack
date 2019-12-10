@@ -23,6 +23,14 @@ const placeSchema = new Schema({
       images:[String],
       description: String
     }]
+  },
+  filters: {
+    time: { type: String, enum:["Weekend", "Week", "+ Week"]},
+    language: {type: String, enum:[ "English", "Spanish", "Chinese", "Hindi", "Arabic", 
+    "Portuguese", "Begali", "Russian", "Japanese"]},
+    continent: { type: String, enum:["Europe", "Asia", "America", "Antarctica", "Oceania"]},
+    activities: {type: String, enum:["Relax", "Beach", "Mountain", "Active tourism"]},
+    money: {type: String, enum:["€","€€","€€€","€€€€"]}
   }
 }, { timestamps: true })
 

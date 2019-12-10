@@ -119,3 +119,10 @@ const createPlaces = places.map(place => {
 // }
 
 
+// filtro por tiempo: un fin de semana, una semana o +dos semanas.
+// idioma: ingles, alemán, francés, portugués, italiano
+// continente: europa, africa, america, asia, oceania, antartida
+// actividades: relax, playa, montaña, turismo activo
+// dinero: €, €€, €€€, €€€€
+
+// nombres: avénturame
