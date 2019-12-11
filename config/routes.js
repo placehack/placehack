@@ -12,6 +12,9 @@ const generalController = require('../controllers/general.controller')
 
 module.exports = router;
 
+router.get('/users/new', authMiddleware.isNotAuthenticated, usersController.new)
+router.post('/users', authMiddleware.isNotAuthenticated, usersController.create)
+
 router.get('/', generalController.index)
 
 router.get('/login', authMiddleware.isNotAuthenticated, usersController.login)
