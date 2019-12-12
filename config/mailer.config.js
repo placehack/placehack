@@ -12,11 +12,13 @@ const transporter = nodemailer.createTransport({
 
 module.exports.sendValidateEmail = (targetUser) => {
   transporter.sendMail({
-    from: `"Twitter Hack 👻" <${user}>`,
+    from: `"PlaceHack" <${user}>`,
     to: targetUser.email,
-    subject: 'Welcome to Twitter Hack!',
+    subject: 'Welcome to new adventure!',
     html: `
-      <h1>Welcome</h1>
+      <h1>Welcome to PlaceHack
+        This mail is send in order to confirm that the sign up process was completed it successufully
+      </h1>
       <a href='${APP_HOST}/users/${targetUser.validateToken}/validate'>Confirm account</a>
     `
   })

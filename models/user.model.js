@@ -51,7 +51,7 @@ const userSchema = new mongoose.Schema({
     const user = this;
   
     if (user.isModified('password')) {
-      bcrypt.genSalt(SALT_WORK_FACTOR)
+      bcrypt.genSalt(Number(Salt))
         .then(salt => {
           return bcrypt.hash(user.password, salt)
             .then(hash => {

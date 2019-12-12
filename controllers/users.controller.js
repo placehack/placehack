@@ -10,7 +10,7 @@ module.exports.doLogin = (req, res, next) => {
   const email = req.body.email
   const password = req.body.password
 
-  User.findOne({ email: email, validated: true })
+  User.findOne({ email: email, validated: false })
     .then(user => {
       if (!user) {
         req.session.genericError = 'Wrong credentials'
@@ -37,6 +37,10 @@ module.exports.doLogin = (req, res, next) => {
 
 module.exports.new = (_,res) => {
   res.render('users/new', {user: new User() })
+}
+
+module.exports.profile = (_,res) => {
+  res.render('users/profile', {user: _.currentUser })
 }
 
 module.exports.create = (req, res, next) => {
