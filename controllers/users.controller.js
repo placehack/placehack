@@ -24,7 +24,7 @@ module.exports.doLogin = (req, res, next) => {
               res.redirect('/login')
             } else {
               req.session.user = user
-              res.redirect('/')
+              res.redirect('/users/profile')
             }
 
           })
@@ -72,4 +72,9 @@ module.exports.create = (req, res, next) => {
       next(error);
     }
   })
+}
+
+module.exports.logout = (req, res) => {
+  req.session.destroy();
+  res.redirect('/login');
 }
