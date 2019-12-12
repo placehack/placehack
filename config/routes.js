@@ -26,3 +26,5 @@ router.get('/search-random', placesController.random)
 // router.get('/search', usersController.search)
 
 router.get('/logout', usersController.logout)
+
+router.get('/filter', placesController.filter)

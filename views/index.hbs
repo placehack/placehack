@@ -15,7 +15,6 @@
         <p class="text-white-75 font-weight-light mb-5">What will be your next adventure?</p>
         <a id="myBtn" class="btn btn-primary btn-xl js-scroll-trigger" href="#">Get me a place</a>
         <a class="btn btn-primary btn-xl js-scroll-trigger" href="/search-random">Random</a>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="/login">Log in</a>
     </div>
     </div>
 </div>
@@ -26,11 +25,15 @@
 <!-- Trigger/Open The Modal -->
 {{!-- <button id="myBtn">Open Modal</button> --}}
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="myModal" class="modal container">
   <!-- Modal content -->
-  <div class="modal-content">
+  <div class="modal-content row justify-content-between">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
+    <div class="col-4">
+        <input type="checkbox" id="asia" >Asia
+  </div>
+  <div class="col-4">
+    <a class="btn btn-primary btn-xl js-scroll-trigger" href="/filter">Search</a>
   </div>
 </div>
 <script>

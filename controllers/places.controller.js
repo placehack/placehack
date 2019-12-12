@@ -25,32 +25,6 @@ module.exports.random = (req, res, next) => {
     
     const randomPlace = placesArr[getRandomInt(0,placesArr.length)]
 
-    // Place.find({name: randomPlace})
-    // .then(place => {
-    //     axios.get(`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${randomPlace}&inputtype=textquery&key=${ApiPlaces}`)
-    //     .then(response => {
-    //         axios.get(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${response.data.candidates[0].place_id}&key=${ApiPlaces}`)
-    //         .then(response => {
-    //             const googleData = response.data.result
-    //             console.log(googleData)
-    //             res.render('search', { googleData, place })
-    //         })
-    //         .catch(error => {
-    //             next(error)
-    //         })
-    //     })
-    //     .catch(error =>{
-    //         next(error)
-    //     })
-    // })
-    // .catch(error =>{
-    //     next(error)
-    // })
-    
-
-
-
-
     axios.get(`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${randomPlace}&inputtype=textquery&key=${ApiPlaces}`)
     .then(response => {
         axios.get(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${response.data.candidates[0].place_id}&key=${ApiPlaces}`)
@@ -73,6 +47,14 @@ module.exports.random = (req, res, next) => {
     })
 }
 
+module.exports.filter = (req, res, next) => {
+
+    console.log(asia)
+    // Place.find({name: })
+    res.render('search')
+
+    // Place.find({name: asia})
+}
 
 
 
