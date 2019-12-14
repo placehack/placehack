@@ -470,3 +470,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
   text-decoration: none;
   cursor: pointer;
 }
+
+.login-wrapper {
+    padding-top: 20px;
+    padding: 100px 100px;
+}
+
+option {
+  padding: 0 50px;
+}

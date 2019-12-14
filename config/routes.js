@@ -12,10 +12,19 @@ const generalController = require('../controllers/general.controller')
 
 module.exports = router;
 
+
+router.get('/users/profile', usersController.profile)
+router.get('/users/new', usersController.new)
+router.post('/users', authMiddleware.isNotAuthenticated, usersController.create)
+
 router.get('/', generalController.index)
 
 router.get('/login', authMiddleware.isNotAuthenticated, usersController.login)
-router.post('/login', authMiddleware.isNotAuthenticated, usersController.doLogin)  
+router.post('/login', usersController.doLogin) 
 
 router.get('/search-random', placesController.random)
 // router.get('/search', usersController.search)
+
+router.get('/logout', usersController.logout)
+
+router.get('/filter', placesController.filter)
