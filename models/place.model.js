@@ -25,10 +25,9 @@ const placeSchema = new Schema({
     }]
   },
   filters: {
-    time: { type: String, enum:["Weekend", "Week", "+ Week"]},
+    time: { type: String, enum:["Weekend", "Week", "+Week"]},
     language: {type: String, enum:[ "English", "Spanish", "Chinese", "Hindi", "Arabic", 
     "Portuguese", "Begali", "Russian", "Japanese"]},
-    continent: { type: String, enum:["Europe", "Asia", "America", "Antarctica", "Oceania"]},
     activities: {type: String, enum:["Relax", "Beach", "Mountain", "Active tourism"]},
     money: {type: String, enum:["€","€€","€€€","€€€€"]}
   }

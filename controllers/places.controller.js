@@ -49,11 +49,20 @@ module.exports.random = (req, res, next) => {
 
 module.exports.filter = (req, res, next) => {
 
-    console.log(asia)
-    // Place.find({name: })
-    res.render('search')
+    let places = []
 
-    // Place.find({name: asia})
+    console.log(req.query.continent)
+    const continents = req.query.continent
+    // Place.find({ "location.continent": { $in: continents } })
+    Place.find()
+    .then(continents => {
+        console.log(continents)
+        // places = [...continents]
+        // console.log(places)
+    })
+    .catch(error => {
+        next(error)
+    })
 }
 
 

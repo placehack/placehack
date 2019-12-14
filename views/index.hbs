@@ -25,16 +25,30 @@
 <!-- Trigger/Open The Modal -->
 {{!-- <button id="myBtn">Open Modal</button> --}}
 <!-- The Modal -->
-<div id="myModal" class="modal container">
-  <!-- Modal content -->
-  <div class="modal-content row justify-content-between">
-    <span class="close">&times;</span>
-    <div class="col-4">
-        <input type="checkbox" id="asia" >Asia
-  </div>
-  <div class="col-4">
-    <a class="btn btn-primary btn-xl js-scroll-trigger" href="/filter">Search</a>
-  </div>
+<div id="myModal" class="modal">
+    <div class="modal-content row justify-content-between">
+      <div class="container">
+      <span class="close">&times;</span>
+      <form action="/filter">
+        <input type="checkbox" name="continent" value="Europe">
+        europe
+        </input>
+        <input type="checkbox" name="continent" value="America">
+        america
+        </input>
+        <input type="checkbox" name="continent" value="Africa">
+        africa
+        </input>
+        <input type="checkbox" name="continent" value="Asia">
+        asia
+        </input>
+        
+        <input type="submit">
+      </form>
+      
+    </div>
+
+  </div>  
 </div>
 <script>
 // Get the modal
