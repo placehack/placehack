@@ -6,14 +6,13 @@ const placeSchema = new Schema({
   mainPhoto: String,
   descriptionPhoto: String,
   location: {
-    lat: Number,
-    lng: Number,
     country: String,
     continent: String,
   },
   images: [String],
   info: {
-    description: String,
+    shortDescription: String,
+    longDescription: String,
     hotSpots: [{
       name: String,
       location: {
