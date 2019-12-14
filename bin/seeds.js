@@ -43,6 +43,7 @@ Place.deleteMany()
             filters: {
                 time: "Weekend" ,
                 language: "Spanish",
+                continent: 'Europe',
                 activities: "Active tourism",
                 money: "€€",
             }
@@ -79,6 +80,7 @@ Place.deleteMany()
     
             filters: {
                 time: "Weekend" ,
+                continent: 'Europe',
                 language: "Spanish",
                 activities: "Active tourism",
                 money: "€€",
@@ -117,6 +119,7 @@ Place.deleteMany()
     
             filters: {
                 time: "+Week" ,
+                continent: 'Asia',
                 language: "Japanese",
                 activities: "Active tourism",
                 money: "€€€",
