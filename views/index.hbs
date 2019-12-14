@@ -25,11 +25,15 @@
 <!-- Trigger/Open The Modal -->
 {{!-- <button id="myBtn">Open Modal</button> --}}
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id="myModal" class="modal container">
   <!-- Modal content -->
-  <div class="modal-content">
+  <div class="modal-content row justify-content-between">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
+    <div class="col-4">
+        <input type="checkbox" id="asia" >Asia
+  </div>
+  <div class="col-4">
+    <a class="btn btn-primary btn-xl js-scroll-trigger" href="/filter">Search</a>
   </div>
 </div>
 <script>
