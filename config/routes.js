@@ -22,8 +22,7 @@ router.get('/', generalController.index)
 router.get('/login', authMiddleware.isNotAuthenticated, usersController.login)
 router.post('/login', usersController.doLogin) 
 
-router.get('/search-random', placesController.random)
-// router.get('/search', usersController.search)
+router.get('/search', placesController.random)
 
 router.get('/logout', usersController.logout)
 

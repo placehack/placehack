@@ -22,11 +22,12 @@
     <div class="featured-property-half d-flex">
         <div class="image" style="background-image: url({{place.descriptionPhoto}})"></div>
         <div class="text">
-            <h2><strong>{{googleData.address_components.0.long_name}}</strong>, {{googleData.address_components.3.long_name}}</STRike></h2>
+            <h2><strong>{{googleData.address_components.0.long_name}}</strong>, {{place.location.country}}</STRike></h2>
             <p class="mb-5">{{place.info.shortDescription}}</p>
             <ul class="property-list-details mb-5">
-                <li class="text-black">Language: <strong class="text-black">{{googleData.address_components.3.short_name}}</strong></li>
-                <li class="text-black">Continent: <strong class="text-black">{{place.location.continent}}</strong></li>
+                <li class="text-black">Language: <strong class="text-black">{{place.info.language}}</strong></li>
+                <li class="text-black">Continent: <strong class="text-black">{{place.filters.continent}}</strong></li>
+                <li class="text-black">Expensive: <strong class="text-black">{{place.filters.money}}</strong></li>
             </ul>
             <p><a href="{{googleData.url}}" class="btn btn-primary px-4 py-3">View on Google Maps</a></p>
         </div>
