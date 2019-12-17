@@ -482,13 +482,9 @@ option {
 
 body {
   font-family: tahoma;
-  height: 100vh;
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  background: rgb(229, 107, 71);
-  background: linear-gradient(to right, rgb(229, 107, 71), #FFCC99);
+  background-image: ;
 }
 
 .our-team {
