@@ -1,28 +1,57 @@
-<body>
-  <form action="/login" method="POST" class="mb-3 container login-wrapper" autocomplete="off">
-      <div class="row">
-        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-          <div class="card card-signin my-5">
-            <div class="card-body">
-              <h5 class="card-title text-center">Login</h5>
-                <div class="form-label-group">
-                  <input name="email" type="email" id="inputEmail" class="form-control {{#if error.email }}is-invalid{{/if}}"
-                  placeholder="Email address" value="{{user.email}}"required autofocus>
-                  <label for="inputEmail">Email address</label>
-                </div>
+<div id="myModal2" class="login-modal">
+    <div class="login-modal-content row justify-content-between">
+      <div class="container">
+        <span class="login-close">&times;</span>
+        <body>
+        <form action="/login" method="POST" class="mb-3 container login-wrapper" autocomplete="off">
+            <div class="row">
+              <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <div class="card card-signin my-5">
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Login</h5>
+                      <div class="form-label-group">
+                        <input name="email" type="email" id="inputEmail" class="form-control {{#if error.email }}is-invalid{{/if}}"
+                        placeholder="Email address" value="{{user.email}}"required autofocus>
+                        <label for="inputEmail">Email address</label>
+                      </div>
 
-                <div class="form-label-group">
-                  <input name="password" type="password" id="inputPassword" class="form-control {{#if error.password }}is-invalid{{/if}}" placeholder="Password" value="{{user.password}}" required>
-                  <label for="inputPassword">Password</label>
-                </div>
+                      <div class="form-label-group">
+                        <input name="password" type="password" id="inputPassword" class="form-control {{#if error.password }}is-invalid{{/if}}" placeholder="Password" value="{{user.password}}" required>
+                        <label for="inputPassword">Password</label>
+                      </div>
 
-                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Login</button>
-                <a href="/users/new">Sign up</a>
-                <hr class="my-4">
-                <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+                      <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Login</button>
+                      <a href="/users/new">Sign up</a>
+                      <hr class="my-4">
+                      <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+        </form>
       </div>
-  </form>
-</body>
+    </div>  
+</div>
+<script>
+
+// Get the modal
+var modal2 = document.getElementById("myModal2");
+// Get the button that opens the modal
+var btn2 = document.getElementById("myBtn2");
+// Get the <span> element that closes the modal
+var span2 = document.getElementsByClassName("login-close")[0];
+// When the user clicks the button, open the modal 
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
+</script>
