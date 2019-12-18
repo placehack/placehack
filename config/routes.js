@@ -13,19 +13,18 @@ const generalController = require('../controllers/general.controller')
 module.exports = router;
 
 
-router.get('/users/profile', usersController.profile)
+router.get('/users/profile', authMiddleware.isAuthenticated,usersController.profile) //Si quiere evitar que esta ruta sea "publica" tengo que poner un middleware.
 router.get('/users/new', usersController.new)
 router.post('/users', authMiddleware.isNotAuthenticated, usersController.create)
 
 router.get('/', generalController.index)
 
 router.get('/login', authMiddleware.isNotAuthenticated, usersController.login)
-router.post('/login', usersController.doLogin) 
+router.post('/login', authMiddleware.isNotAuthenticated, usersController.doLogin)
+router.get('/logout', authMiddleware.isAuthenticated, usersController.logout)
 
 router.get('/search', placesController.random)
 
-router.get('/logout', usersController.logout)
-
 router.get('/filter', placesController.filter)
 
-router.get('/place/:id/save', placesController.savePlace)
+router.get('/place/:id/save', authMiddleware.isAuthenticated, placesController.savePlace)
