@@ -1,6 +1,7 @@
 const User = require('../models/user.model');
 const moongose = require('mongoose');
 const mailer = require('../config/mailer.config');
+const Place = require('../models/place.model'); 
 
 module.exports.login = (_, res) => {
     res.render('users/login')
@@ -39,8 +40,17 @@ module.exports.new = (_,res) => {
   res.render('users/new', {user: new User() })
 }
 
-module.exports.profile = (_,res) => {
-  res.render('users/profile', {user: _.currentUser })
+module.exports.profile = (req,res) => {
+  console.log(req.currentUser.id)
+  Place.find({users: req.currentUser.id})
+  .then(places => {
+    console.log(places)
+    res.render('users/profile', {user: req.currentUser, places })
+
+  })
+  .catch(error => {
+    next(error)
+  })
 }
 
 module.exports.create = (req, res, next) => {
@@ -75,6 +85,7 @@ module.exports.create = (req, res, next) => {
 }
 
 module.exports.logout = (req, res) => {
+  res.clearCookie('connect.sid')
   req.session.destroy();
-  res.redirect('/login');
+  res.redirect('/');
 }

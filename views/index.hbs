@@ -1,6 +1,3 @@
-{{!-- <button type="button" class="btn btn-primary">Get me a place</button>
-<button type="button" class="btn btn-success">Random</button> --}}
-
 <script>
     window.onload = randombg
 </script>
@@ -14,7 +11,7 @@
     <div class="col-lg-8 align-self-baseline">
         <p class="text-white-75 font-weight-light mb-5">What will be your next adventure?</p>
         <a id="myBtn" class="btn btn-primary btn-xl js-scroll-trigger" href="#">Get me a place</a>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="/search-random">Random</a>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="/search">Random</a>
     </div>
     </div>
 </div>
@@ -22,130 +19,9 @@
 
 </head>
 <body>
-<!-- Trigger/Open The Modal -->
-{{!-- <button id="myBtn">Open Modal</button> --}}
-<!-- The Modal -->
-<div id="myModal" class="modal">
-    <div class="modal-content row justify-content-between">
-      <div class="container">
-      <span class="close">&times;</span>
-      <form action="/filter">
-        <input type="checkbox" name="continent" value="Europe">
-        Europe
-        </input>
-        <input type="checkbox" name="continent" value="America">
-        America
-        </input>
-        <input type="checkbox" name="continent" value="Africa">
-        Africa
-        </input>
-        <input type="checkbox" name="continent" value="Asia">
-        Asia
-        </input>
-        </input>
-        <input type="checkbox" name="continent" value="Oceania">
-        Oceania
-        </input>
-        <input type="checkbox" name="continent" value="Antarctica">
-        Antarctica
-        </input>
 
-        <input type="checkbox" name="time" value="Weekend">
-        Weekend
-        </input>
-        <input type="checkbox" name="time" value="Week">
-        Week
-        </input>
-        <input type="checkbox" name="time" value="+Week">
-        +Week
-        </input>
+{{>login2}}
 
-        <input type="checkbox" name="language" value="English">
-        English
-        </input>
-        <input type="checkbox" name="language" value="Spanish">
-        Spanish
-        </input>
-        <input type="checkbox" name="language" value="Chinese">
-        Chinese
-        </input>
-        <input type="checkbox" name="language" value="Hindi">
-        Hindi
-        </input>
-        <input type="checkbox" name="language" value="Arabic">
-        Arabic
-        </input>
-        <input type="checkbox" name="language" value="Portuguese">
-        Portuguese
-        </input>
-        <input type="checkbox" name="language" value="Begali">
-        Begali
-        </input>
-        <input type="checkbox" name="language" value="Russian">
-        Russian
-        </input>
-        <input type="checkbox" name="language" value="Japanese">
-        Japanese
-        </input>
-
-        <input type="checkbox" name="activities" value="Relax">
-        Relax
-        </input>
-        <input type="checkbox" name="activities" value="Beach">
-        Beach
-        </input>
-        <input type="checkbox" name="activities" value="Mountain">
-        Mountain
-        </input>
-        <input type="checkbox" name="activities" value="Active Tourism">
-        Active Tourism
-        </input>
-
-        <input type="checkbox" name="money" value="€">
-        €
-        </input>
-        <input type="checkbox" name="money" value="€€">
-        €€
-        </input>
-        <input type="checkbox" name="money" value="€€€">
-        €€€
-        </input>
-        <input type="checkbox" name="money" value="€€€€">
-        €€€€
-        </input>
-
-
-        
-        <input type="submit">
-      </form>
-      
-    </div>
-
-  </div>  
-</div>
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-
-
+{{>filters}}
 
 </header>

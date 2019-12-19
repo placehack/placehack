@@ -1,0 +1,205 @@
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <div class="container">
+        <div class="modal-content row justify-content-between">
+        
+            <span class="close">&times;</span>
+            <form action="/filter">
+                <div class="row">
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="continent" value="Europe"></input>
+                    <div id="filter" class="filter-card" onclick="cardSelected(event)">
+                        <p>Europe</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="continent" value="America"></input>
+                    <div id="America" class="filter-card" onclick="cardSelected(event)">
+                        <p>America</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="continent" value="Africa"></input>
+                    <div id="Africa" class="filter-card" onclick="cardSelected(event)">
+                        <p>Africa</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="continent" value="Asia"></input>
+                    <div id="Asia" class="filter-card" onclick="cardSelected(event)">
+                        <p>Asia</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="continent" value="Oceania"></input>
+                    <div id="Oceania" class="filter-card" onclick="cardSelected(event)">
+                        <p>Oceania</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="continent" value="Antarctica"></input>
+                    <div id="Antartica" class="filter-card" onclick="cardSelected(event)">
+                        <p>Antartica</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="time" value="Weekend"></input>
+                    <div id="Weekend" class="filter-card" onclick="cardSelected(event)">
+                        <p>Weekend</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="time" value="Week"></input>
+                    <div id="Week" class="filter-card" onclick="cardSelected(event)">
+                        <p>Week</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="time" value="+Week"></input>
+                    <div id="+Week" class="filter-card" onclick="cardSelected(event)">
+                        <p>+Week</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="language" value="English"></input>
+                    <div id="English" class="filter-card" onclick="cardSelected(event)">
+                        <p>English</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="language" value="Spanish"></input>
+                    <div id="Spanish" class="filter-card" onclick="cardSelected(event)">
+                        <p>Spanish</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="language" value="Chinese"></input>
+                    <div id="Chinese" class="filter-card" onclick="cardSelected(event)">
+                        <p>Chinese</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="language" value="Hindi"></input>
+                    <div id="Hindi" class="filter-card" onclick="cardSelected(event)">
+                        <p>Hindi</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="language" value="Arabic"></input>
+                    <div id="Arabic" class="filter-card" onclick="cardSelected(event)">
+                        <p>Arabic</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="language" value="Portuguese"></input>
+                    <div id="Portuguese" class="filter-card" onclick="cardSelected(event)">
+                        <p>Portuguese</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="language" value="Begali"></input>
+                    <div id="Begali" class="filter-card" onclick="cardSelected(event)">
+                        <p>Begali</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="language" value="Russian"></input>
+                    <div id="Russian" class="filter-card" onclick="cardSelected(event)">
+                        <p>Russian</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="language" value="Japanese"></input>
+                    <div id="Japanese" class="filter-card" onclick="cardSelected(event)">
+                        <p>Japanese</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="activities" value="Relax"></input>
+                    <div id="Relax" class="filter-card" onclick="cardSelected(event)">
+                        <p>Relax</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="activities" value="Beach"></input>
+                    <div id="Beach" class="filter-card" onclick="cardSelected(event)">
+                        <p>Beach</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="activities" value="Mountain"></input>
+                    <div id="Mountain" class="filter-card" onclick="cardSelected(event)">
+                        <p>Mountain</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="activities" value="Active Tourism"></input>
+                    <div id="ActTourism" class="filter-card" onclick="cardSelected(event)">
+                        <p>ActTourism</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="activities" value="Adventure"></input>
+                    <div id="Adventure" class="filter-card" onclick="cardSelected(event)">
+                        <p>Adventure</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="money" value="€"></input>
+                    <div id="€" class="filter-card" onclick="cardSelected(event)">
+                        <p>€</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="money" value="€€"></input>
+                    <div id="€€" class="filter-card" onclick="cardSelected(event)">
+                        <p>€€</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="money" value="€€€"></input>
+                    <div id="€€€" class="filter-card" onclick="cardSelected(event)">
+                        <p>€€€</p>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-md-3 col-6">
+                    <input type="checkbox" class="input-category" name="money" value="€€€€"></input>
+                    <div id="€€€€" class="filter-card" onclick="cardSelected(event)">
+                        <p>€€€€</p>
+                    </div>
+                </div>
+                </div>
+                <div class="row row-modal-submit">
+                    <div class="col justify-content-md-center">
+                        <input class="btn btn-primary btn-xl js-scroll-trigger" type="submit">
+                    </div>
+                </div>
+                
+            </form>
+        
+        </div>
+    </div>
+</div>
+<script>
+
+// Get the modal
+var modal = document.getElementById("myModal");
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>

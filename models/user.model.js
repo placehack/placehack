@@ -44,8 +44,16 @@ const userSchema = new mongoose.Schema({
     validated: {
       type: Boolean,
       default: false
-    }
+    },
   }, { timestamps: true })
+
+  userSchema.virtual('places', {
+    ref: 'Place',
+    localField: '_id',
+    foreignField: 'users',
+    justOne: false,
+  });
+  
 
   userSchema.pre('save', function (next) {
     const user = this;
@@ -68,13 +76,6 @@ const userSchema = new mongoose.Schema({
   userSchema.methods.checkPassword = function (password) {
     return bcrypt.compare(password, this.password);
   }
-  
-  userSchema.virtual('places', {
-    ref: 'Place',
-    localField: '_id',
-    foreignField: 'user',
-    justOne: false,
-  });
   
   const User = mongoose.model('User', userSchema);
   
