@@ -87,15 +87,15 @@ module.exports.filter = (req, res, next) => {
 
             })
             .catch(error => {
-                next(error)
+                res.render('notFound')
             })
         })
         .catch(error =>{
-            next(error)
+            res.render('notFound')
         }) 
     })
     .catch(error => {
-        next(error)
+        res.render('notFound')
     })
 }
 

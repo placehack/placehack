@@ -2,6 +2,7 @@ module.exports.isAuthenticated = (req, res, next) => {
     if (req.session.user) {
       next()
     } else {
+      console.log('User is not authenticated')
       req.session.genericError = 'User is not authenticated!'
       res.redirect('/');
     }
@@ -17,23 +18,3 @@ module.exports.isAuthenticated = (req, res, next) => {
       next()
     }
   }
-
-
-// module.exports.isAuthenticated = (req, res, next) => {
-//   if (req.session.user) {
-//       next()
-//   } else {
-//     req.session.genericError = "Need authentication"
-//     res.redirect("/login")
-//   }
-// }
-
-// module.exports.isNotAuthenticated = (req, res, next) => {
-//   console.log("YISUS")
-//   if (req.session.user) {
-//     res.redirect("/login")
-//   } else {
-//       next()
-//   }
-  
-// }

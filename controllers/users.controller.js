@@ -40,12 +40,12 @@ module.exports.new = (_,res) => {
   res.render('users/new', {user: new User() })
 }
 
-module.exports.profile = (_,res) => {
-  console.log(_.currentUser.id)
-  Place.find({users: _.currentUser.id})
+module.exports.profile = (req,res) => {
+  console.log(req.currentUser.id)
+  Place.find({users: req.currentUser.id})
   .then(places => {
     console.log(places)
-    res.render('users/profile', {user: _.currentUser, places })
+    res.render('users/profile', {user: req.currentUser, places })
 
   })
   .catch(error => {
@@ -85,6 +85,7 @@ module.exports.create = (req, res, next) => {
 }
 
 module.exports.logout = (req, res) => {
+  res.clearCookie('connect.sid')
   req.session.destroy();
   res.redirect('/');
 }

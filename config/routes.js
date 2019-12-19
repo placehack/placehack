@@ -13,7 +13,7 @@ const generalController = require('../controllers/general.controller')
 module.exports = router;
 
 
-router.get('/users/profile', authMiddleware.isAuthenticated,usersController.profile) //Si quiere evitar que esta ruta sea "publica" tengo que poner un middleware.
+router.get('/users/profile', authMiddleware.isAuthenticated, usersController.profile) //Si quiere evitar que esta ruta sea "publica" tengo que poner un middleware.
 router.get('/users/new', usersController.new)
 router.post('/users', authMiddleware.isNotAuthenticated, usersController.create)
 
