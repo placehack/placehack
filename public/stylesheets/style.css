@@ -203,7 +203,7 @@ hr.divider {
 }
 
 .btn-primary {
-    color: #fff;
+    color: #fff !important;
     background-color: #f4623a;
     border-color: #f4623a;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
@@ -443,7 +443,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 13%; /* Location of the box */
+  padding-top: 10%; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -498,7 +498,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   float: right;
   font-size: 28px;
   font-weight: bold;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .login-close {
