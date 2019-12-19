@@ -41,8 +41,8 @@ module.exports.new = (_,res) => {
 }
 
 module.exports.profile = (req,res) => {
-  console.log(req.currentUser.id)
-  Place.find({users: req.currentUser.id})
+  console.log(req.currentUser._id)
+  Place.find({users: `${req.currentUser._id}`})
   .then(places => {
     console.log(places)
     res.render('users/profile', {user: req.currentUser, places })

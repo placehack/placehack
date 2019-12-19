@@ -14,33 +14,36 @@
           <div class="team-content">
             <h3 class="name">{{user.name}}</h3>
             <h4 class="title">{{user.username}}</h4>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="/logout">Logout</a>
+            {{!-- <a class="btn btn-primary btn-xl js-scroll-trigger" href="/logout">Logout</a> --}}
           </div>
-        
         </div>
       </div>
+    </div>
+  </div>
+  <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-evenly;">
+    {{#each places as |place|}}
 
-      <div>
         <div class="bcn-card login-wrapper">
-            <h1>Barcelona</h1>
-            <div class="flip-card">
+            <div class="flip-card" style="margin-bottom: 30px;">
               <div class="flip-card-inner">
                 <div class="flip-card-front">
-                  <img src="/img/mainPhotos/barcelona.jpg" style="width:300px;height:300px;">
+                  <img src="{{place.descriptionPhoto}}" style="width:300px;height:300px;">
                 </div>
                 <div class="flip-card-back">
-                  <h1>Place description</h1> 
-                  <li>Sagrada Familia</li> 
-                  <li>bla</li>
-                  <li>bla</li>
-                  <li>bla</li>
+                  <h1>{{place.name}}</h1>
+                  <li>{{place.info.shortDescription}}</li> 
+                  <li>{{place.info.language}}</li> 
+                  <li>{{place.location.country}}</li>
+                  <li>{{place.location.continent}}</li>
+                  <li>{{place.filters.money}}</li>
                 </div>
             </div>
           </div>
         </div>
-      </div>
-      </div>
-      </div>
+
+    {{/each}}
+  </div>
+
 
 
 
