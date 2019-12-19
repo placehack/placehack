@@ -29,9 +29,19 @@
                 <li class="text-black">Continent: <strong class="text-black">{{place.filters.continent}}</strong></li>
                 <li class="text-black">Expensive: <strong class="text-black">{{place.filters.money}}</strong></li>
             </ul>
-            <p><a href="{{googleData.url}}" class="btn btn-primary px-4 py-3">View on Google Maps</a></p>
-            <p><a id="{{place.id}}" class="btn btn-primary px-4 py-3" onclick="savePlace(event)">Save place</a></p>
+            <div class="w-100">
+                <p><a href="{{googleData.url}}" class="btn btn-primary px-4 py-3 w-100">View on Google Maps</a></p>
+                {{#if currentUser}}
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <a id="{{place.id}}" class="btn btn-primary px-4 py-3 c-white" style="width: 47.5%; color: white !important" onclick="savePlace(event)">Save place</a>
+                {{/if}}
+                    <a class="btn btn-primary btn-xl js-scroll-trigger  px-4 py-3" style="width: 47.5%" href="/search">Random</a>
+                </div>
+                
+            </div>
+        
         </div>
+        
     </div>
 </div>
 

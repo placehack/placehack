@@ -817,3 +817,13 @@ body {
 :root {
   --category-bg-color: #f4623a;
 }
+
+.button-center {
+  display: flex; 
+  flex-flow: column; 
+  align-items: center;
+}
+
+.singup-button {
+  margin-top: 5%;
+}
