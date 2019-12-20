@@ -103,16 +103,38 @@ module.exports.savePlace = (req, res, next) => {
     const user = req.currentUser
     const idPlace = req.params.id
 
-    Place.findById(idPlace)
+    console.log(idPlace)
+
+    // Place.findById(idPlace)
+    // .populate('users')
+    // .then(place => {
+        
+    //     place.users.push(user)
+    //     console.log(place.users)
+    // })
+    // .catch(error => {
+    //     next(error)
+    // })
+
+
+    Place.updateOne({_id: idPlace},{$push: {users: user}})
     .populate('users')
     .then(place => {
-        place.users.push(user)
         console.log(place)
-        
     })
     .catch(error => {
         next(error)
     })
+
+
+    // Place.find({_id: idPlace})
+    // .populate('users')
+    // .then(place => {
+    //     console.log(place)
+    // })
+    // .catch(error => {
+    //     next(error)
+    // })
 }
 
 

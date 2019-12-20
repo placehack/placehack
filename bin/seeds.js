@@ -13,6 +13,7 @@ Place.deleteMany()
         {
             name: 'Barcelona',
             mainPhoto: '/img/mainPhotos/barcelona.jpg',
+            users:[],
             descriptionPhoto: 'https://veebrant.com/wp-content/uploads/2019/06/barcelona-gaudi-destination-featured.jpg',
             location: {
                 country: 'Spain',
@@ -73,6 +74,7 @@ Place.deleteMany()
         {
             name: 'Madrid',
             mainPhoto: '/img/mainPhotos/madrid.jpg',
+            users:[],
             descriptionPhoto: 'https://montessori-ami.org/sites/default/files/images/countries/spain.jpg',
             location: {
                 country: 'Spain',
@@ -134,6 +136,7 @@ Place.deleteMany()
         {
             name: 'Tokio',
             mainPhoto: 'https://lp-cms-production.imgix.net/2019-06/GettyImages-173253572_super.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1',
+            users:[],
             descriptionPhoto: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
             location: {
                 country: 'Japan',
@@ -194,6 +197,7 @@ Place.deleteMany()
         {
             name: 'Amsterdam',
             mainPhoto: 'https://lp-cms-production.imgix.net/2019-06/stock-photo-beautiful-amsterdam-76796579.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1',
+            users:[],
             descriptionPhoto: 'https://cdn.civitatis.com/paises-bajos/amsterdam/galeria/casas-barco-amsterdam.jpg',
             location: {
                 country: 'The Netherlands',
@@ -254,6 +258,7 @@ Place.deleteMany()
         {
             name: "Berlin",
             mainPhoto: "https://lp-cms-production.imgix.net/2019-06/GettyImages-475150263_super.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
+            users:[],
             descriptionPhoto: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Aerial_view_of_Berlin_%2832881394137%29.jpg/1200px-Aerial_view_of_Berlin_%2832881394137%29.jpg",
             location: {
                 country: "Germany",
@@ -314,6 +319,7 @@ Place.deleteMany()
         {
             name: "Hong Kong",
             mainPhoto: "https://lp-cms-production.imgix.net/2019-06/stock-photo-the-trench-run-54952580.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
+            users:[],
             descriptionPhoto: "https://www.lowyinstitute.org/sites/default/files/14195355069_40bf85674c_k%20copy.jpg",
             location: {
                 country: "China",
@@ -374,6 +380,7 @@ Place.deleteMany()
         {
             name: "San Francisco",
             mainPhoto: "https://lp-cms-production.imgix.net/2019-06/9cf024dfd5c0bcb2b17f4785340145ea-san-francisco.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
+            users:[],
             descriptionPhoto: "https://image.cnbcfm.com/api/v1/image/105284147-GettyImages-673632588.jpg?v=1557935343&w=1400&h=950",
             location: {
                 country: "California, USA",
@@ -434,6 +441,7 @@ Place.deleteMany()
         {
             name: "Cape Town",
             mainPhoto: "https://lp-cms-production.imgix.net/2019-06/stock-photo-welcome-to-cape-town-104168527.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
+            users:[],
             descriptionPhoto: "https://lp-cms-production.imgix.net/2019-06/GettyImages-475149341_super.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
             location: {
                 country: "South Africa",
@@ -494,6 +502,7 @@ Place.deleteMany()
         {
             name: "Alaska",
             mainPhoto: "https://lp-cms-production.imgix.net/2019-06/80472fa866c28387f301ceaf0a42080e-alaska.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
+            users:[],
             descriptionPhoto: "https://lp-cms-production.imgix.net/2019-06/76303971.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
             location: {
                 country: "USA",
@@ -554,7 +563,8 @@ Place.deleteMany()
         {
             name: "Sydney",
             mainPhoto: "https://lp-cms-production.imgix.net/2019-06/65830387.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
-            descriptionPhoto: "https://wallpaperstock.net/downtown-sidney-wallpapers_22952_1920x1200.jpg",
+            users:[],
+            descriptionPhoto: "https://i.pinimg.com/originals/7a/36/e0/7a36e00494a2f2603ea4f0c841e3ba11.jpg",
             location: {
                 country: "Australia",
                 continent: "Oceania",
@@ -614,6 +624,7 @@ Place.deleteMany()
         {
             name: "Nusa Tenggara",
             mainPhoto: "https://lp-cms-production.imgix.net/2019-09/45440f65eb0fecff6484bead12864c1e-nusa-tenggara.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
+            users:[],
             descriptionPhoto: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-540x360/07/e2/3e/5e.jpg",
             location: {
                 country: "Indonesia",
@@ -674,6 +685,7 @@ Place.deleteMany()
         {
             name: "Buffalo",
             mainPhoto: "https://lp-cms-production.imgix.net/2019-06/b5fc9c60ea5410a5809834e8d837aae6-buffalo.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
+            users:[],
             descriptionPhoto: "https://www.visittheusa.mx/sites/default/files/styles/hero_m_1300x700/public/images/hero_media_image/2016-10/HERO%201_GettyImages-182773106_Cropped_Web72DPI.jpg?itok=SipcQ1No",
             location: {
                 country: "New York, USA",
@@ -734,6 +746,7 @@ Place.deleteMany()
         {
             name: "Chhattisgarh",
             mainPhoto: "https://lp-cms-production.imgix.net/2019-06/740aaa5db1b0ef3e84257d07cd705c22192ee09d2285ac8ccbb9487c738ab50c.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
+            users:[],
             descriptionPhoto: "https://static.toiimg.com/photo/38796013/.jpg",
             location: {
                 country: "India",
@@ -794,6 +807,7 @@ Place.deleteMany()
         {
             name: "Budapest",
             mainPhoto: "https://lp-cms-production.imgix.net/2019-06/stock-photo-budapest-at-night-part-iii-76226665.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
+            users:[],
             descriptionPhoto: "https://img.huffingtonpost.com/asset/5c41f03b2300002f001f9efc.jpeg?ops=scalefit_720_noupscale",
             location: {
                 country: "Hungary",
@@ -854,6 +868,7 @@ Place.deleteMany()
         {
             name: "Bilbao",
             mainPhoto: "https://lp-cms-production.imgix.net/2019-06/GettyImages-461465445_full.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
+            users:[],
             descriptionPhoto: "https://www.barcelo.com/pinandtravel/wp-content/uploads/2017/09/what-to-do-in-bilbao-trip-to-bilbao-1024x684.jpg",
             location: {
                 country: "Spain",
@@ -914,6 +929,7 @@ Place.deleteMany()
         {
             name: "Salzburg",
             mainPhoto: "https://lp-cms-production.imgix.net/2019-06/GettyImages-472316594_super.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
+            users:[],
             descriptionPhoto: "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/aa/fd/49.jpg",
             location: {
                 country: "Austria",
@@ -974,6 +990,7 @@ Place.deleteMany()
         {
             name: "Cairo",
             mainPhoto: "https://suitcasemag.com/wp-content/uploads/2019/02/cairo-feature-image-1920x1080.jpg",
+            users:[],
             descriptionPhoto: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/view-of-the-great-sphinx-pyramid-of-khafre-and-royalty-free-image-1000882754-1551818386.jpg?crop=0.753xw:1.00xh;0.0304xw,0&resize=640:*",
             location: {
                 country: "Egypt",
@@ -1034,6 +1051,7 @@ Place.deleteMany()
         {
             name: "La Paz",
             mainPhoto: "https://lp-cms-production.imgix.net/2019-06/94327849.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
+            users:[],
             descriptionPhoto: "https://cdn.britannica.com/86/61286-050-605DE5FD/La-Paz-Bol.jpg",
             location: {
                 country: "Bolivia",
@@ -1094,6 +1112,7 @@ Place.deleteMany()
         {
             name: "Vancouver",
             mainPhoto: "https://lp-cms-production.imgix.net/2019-06/27860479.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
+            users:[],
             descriptionPhoto: "https://lp-cms-production.imgix.net/2019-06/72423ed05ba070876112620724440230-vancouver.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
             location: {
                 country: "Canada",
@@ -1154,6 +1173,7 @@ Place.deleteMany()
         {
             name: "Dubai",
             mainPhoto: "https://lp-cms-production.imgix.net/2019-06/GettyImages-540039747_full.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=1",
+            users:[],
             descriptionPhoto: "https://www.24hseries.com/uploads/files/sympa/Dubai.jpg",
             location: {
                 country: "United Arab Emirates",
@@ -1214,6 +1234,7 @@ Place.deleteMany()
         {
             name: "Dominican Republic",
             mainPhoto: "https://3j0grh44ocny4a6kcn288izx-wpengine.netdna-ssl.com/wp-content/uploads/2018/05/punta-950x530.jpg",
+            users:[],
             descriptionPhoto: "https://lp-cms-production.imgix.net/2019-06/a458401677874c51175952f5758ce8ef-caribbean.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4&w=1600&q=40&dpr=3",
             location: {
                 country: "Caribbean",
@@ -1304,7 +1325,7 @@ Place.deleteMany()
 // {
 //     name: '',
 //     mainPhoto: '',
-//     descriptionPhoto: '',
+//descriptionPhoto: '',
 //     location: {
 //         country: '',
 //         continent: '',

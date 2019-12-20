@@ -270,6 +270,17 @@ hr.divider {
     background-size: cover;
 }
 
+#cabecera404 {
+  padding-top: 8rem;
+  padding-bottom: calc(10rem - 72px);
+  /* background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../img/fondo-cabecera_01.jpg"); */
+  background-image: url("../img/404-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
 header.masthead h1 {
     font-size: 2.25rem;
 }
@@ -518,7 +529,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 .login-wrapper {
     padding-top: 20px;
-    padding: 0px 100px;
+    padding: 0px 20px;
 }
 
 .new-wrapper {
@@ -818,6 +829,17 @@ body {
   --category-bg-color: #f4623a;
 }
 
+
+
+.flip-card-back hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 120px;
+  margin-right: 120px;
+  border: 1px solid #f4623a;
+}
+
 .button-center {
   display: flex; 
   flex-flow: column; 
@@ -826,4 +848,5 @@ body {
 
 .singup-button {
   margin-top: 5%;
+
 }
