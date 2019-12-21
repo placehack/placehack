@@ -65,7 +65,7 @@ module.exports.create = (req, res, next) => {
   user.save()
   .then((user) => {
     mailer.sendValidateEmail(user)
-    res.redirect('/login')
+    res.redirect('/')
   })
   .catch(error => {
     if (error instanceof moongose.Error.ValidationError) {
