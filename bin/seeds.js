@@ -1,3 +1,4 @@
+require('dotenv').config()
 const mongoose = require('mongoose')
 const Place = require('../models/place.model');
 require('../config/db.config')
