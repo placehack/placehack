@@ -87,17 +87,17 @@ module.exports.filter = (req, res, next) => {
 
             })
             .catch(error => {
-                res.render('notFound')
+                res.render('NotFound')
             })
         })
         .catch(error =>{
-            res.render('notFound')
+            res.render('NotFound')
         }) 
     })
     .catch(error => {
-        res.render('notFound')
+        res.render('NotFound')
     })
-    
+
 }
 
 module.exports.savePlace = (req, res, next) => {
