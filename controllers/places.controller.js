@@ -97,6 +97,7 @@ module.exports.filter = (req, res, next) => {
     .catch(error => {
         res.render('notFound')
     })
+    
 }
 
 module.exports.savePlace = (req, res, next) => {
