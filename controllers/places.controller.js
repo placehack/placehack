@@ -1,7 +1,7 @@
 const createError = require('http-errors');
 const mongoose = require('mongoose');
 const axios = require('axios')
-const ApiPlaces = process.env.API_PLACES
+const ApiPlaces ='AIzaSyCjvqa0sQRyFXPsEoTEKHmmnTdLrkghIyQ'
 const Place = require('../models/place.model');
 
 // const placesArr = [
